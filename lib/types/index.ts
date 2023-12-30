@@ -3,3 +3,13 @@ export type NavItemsParams = {
     title: String,
     className?: String
 }
+
+export type SectionLayoutParams = {
+    children: any,
+    className?: String,
+}
+
+export type AnimatedTextParams = {
+    text: String,
+    className?: String,
+}

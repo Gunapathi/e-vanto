@@ -1,7 +1,12 @@
 import Footer from "@comp/Footer";
 import Header from "@comp/Header";
-import { Mulish } from "next/font/google";
+import { Mulish, Montserrat } from "next/font/google";
 import "~scss/style.scss";
+
+const monsterrat = Montserrat({
+	subsets: ["latin"],
+	variable: "--font-mont",
+});
 
 const mulish = Mulish({
 	subsets: ["latin"],
@@ -15,7 +20,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={``}>
+		<html
+			lang="en"
+			className={``}>
 			<body className={`${mulish.variable} pt-[60px] md:pt-[90px]`}>
 				<Header />
 				{children}
