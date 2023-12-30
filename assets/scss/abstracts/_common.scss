@@ -1,0 +1,8 @@
+
+@import "~scss/mixins/_breakpoints.scss";
+
+html,
+body {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
