@@ -24,6 +24,7 @@ const ImageLoader = ({
 			loading={loading}
 			className={className}
 			quality={quality}
+			fill={fill}
 			width={width}
 			height={height}
 			style={style}

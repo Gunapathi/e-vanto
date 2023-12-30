@@ -1,6 +1,7 @@
-import { getData } from "@utils/getData";
+import HomeBanner from "@comp/Home/HomeBanner";
+import RandomProductGrid from "@comp/RandomProductGrid";
+// import { getData } from "@utils/getData";
 import { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "E-Vanto",
@@ -8,12 +9,20 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-	const data = await getData();
+	const data = await fetch(`${process.env.STATIC_URL}/api/products`).then(
+		(res) => res.json()
+	);
 
 	return (
-		<main className={`w-[88%] max-w-[1300px] mx-auto`}>
-			This is home page
-			<Link href={"/"} className="relative block h-[700px]">Hello</Link>
+		<main className={``}>
+			<HomeBanner />
+			<div className="pt-8">
+				<RandomProductGrid
+					postList={data?.products
+						?.sort(() => Math.random() - 0.5)
+						.slice(0, 4)}
+				/>
+			</div>
 		</main>
 	);
 }
