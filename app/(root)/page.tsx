@@ -13,7 +13,7 @@ export default async function Home() {
 	return (
 		<main className={`w-[88%] max-w-[1300px] mx-auto`}>
 			This is home page
-			<Link href={"/"}>Hello</Link>
+			<Link href={"/"} className="relative block h-[700px]">Hello</Link>
 		</main>
 	);
 }

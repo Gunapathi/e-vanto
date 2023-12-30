@@ -1,3 +1,5 @@
-export type IconParams = {
-    className: any
+export type NavItemsParams = {
+    href: String,
+    title: String,
+    className?: String
 }

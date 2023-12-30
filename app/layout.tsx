@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={``}>
-			<body className={mulish.variable}>
+			<body className={`${mulish.variable} pt-[60px] md:pt-[90px]`}>
 				<Header />
 				{children}
 				<Footer />

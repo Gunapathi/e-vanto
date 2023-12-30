@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, usePathname } from "next/navigation";
 
-const pageLoading = () => {
+const PageLoading = () => {
 	const [pageReady, setPageReady] = useState<any>(false);
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
@@ -32,4 +32,4 @@ const pageLoading = () => {
 	return pageReady;
 };
 
-export default pageLoading;
+export default PageLoading;
