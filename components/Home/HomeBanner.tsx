@@ -1,4 +1,4 @@
-import AnimatedText from "./AnimatedText";
+import AnimatedText from "../common/AnimatedText";
 import ImageLoader from "@utils/ImageLoader";
 
 const HomeBanner = () => {
