@@ -48,3 +48,11 @@ header {
 	background-size: center center;
 	z-index: -1;
 }
+
+.scrollbar-hide {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

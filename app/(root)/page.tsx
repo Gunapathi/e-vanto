@@ -1,3 +1,4 @@
+import MenuTransitionEffect from "@comp/common/MenuTransitionEffect";
 import HomeBanner from "@comp/home/HomeBanner";
 import RandomProductGrid from "@comp/product/RandomProductGrid";
 // import { getData } from "@utils/getData";
@@ -15,6 +16,7 @@ export default async function Home() {
 
 	return (
 		<main className={``}>
+			<MenuTransitionEffect />
 			<HomeBanner />
 			<div className="pt-8">
 				<RandomProductGrid
