@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-	const data = await fetch(`${process.env.DUMMY_JSON_URI}/products`).then(
+	const data = await fetch(`${process.env.STATIC_URL}/api/products`).then(
 		(res) => res.json()
 	);
 
