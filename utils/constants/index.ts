@@ -15,8 +15,8 @@ export const headerMainLinks = [
 
 export const headerRightLinks = [
     {
-        label: 'Cart',
-        route: '/cart',
+        label: 'Checkout',
+        route: '/checkout',
     },
     {
         label: 'Wishlist',

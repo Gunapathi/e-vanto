@@ -1,17 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import ProductItem from "./ProductItem";
 import Slider from "react-slick";
-import axios from "axios";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ProductItem from "./ProductItem";
 
 const RandomProductGrid = ({ postList }: any) => {
 	const settings = {
-		dots: false,
+		dots: true,
 		arrows: false,
+		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		adaptiveHeight: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
 	};
 
 	return (

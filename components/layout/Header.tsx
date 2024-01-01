@@ -7,6 +7,7 @@ import ActionMenuList from "./ActionMenuList";
 import useMediaQuery from "@utils/hooks/useMediaQuery";
 import MobileNav from "./MobileNav";
 import { useEffect } from "react";
+import Link from "next/link";
 
 const Header = () => {
 	const isPageWide = useMediaQuery("(min-width: 768px)");
@@ -51,7 +52,10 @@ const Header = () => {
 							/>
 						))}
 				</nav>
-				<div className="max-w-[28px] md:max-w-[38px] z-[1] cursor-pointer">
+				<Link
+					className="max-w-[28px] md:max-w-[38px] z-[1] cursor-pointer"
+					href={'/'}
+				>
 					<ImageLoader
 						src={"/images/logo.svg"}
 						width={38}
@@ -62,7 +66,7 @@ const Header = () => {
 						}}
 						priority
 					/>
-				</div>
+				</Link>
 				<div className={`hidden md:block`}>
 					<ActionMenuList />
 				</div>

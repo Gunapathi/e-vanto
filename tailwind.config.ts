@@ -45,6 +45,11 @@ const config: Config = {
 
 			circularDarkSm:
 				"repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 4px,#1b1b1b 40px)",
+
+			shippingCardBg: 'linear-gradient(331deg, rgba(82,78,149,1) 0%, rgba(66,66,171,1) 35%, rgba(54,109,189,1) 100%)',
+
+			paymentCardBg: 'linear-gradient(331deg, rgba(20,42,76,1) 0%, rgba(60,60,105,1) 35%, rgba(76,117,175,1) 100%)'
+
 		},
 		extend: {
 			colors: {
@@ -52,7 +57,8 @@ const config: Config = {
 				light: "#f5f5f5",
 				primary: "#B63E96", // 240,86,199
 				primaryDark: "#58E6D9", // 80,230,217
-				primaryRed: '#e30217'
+				primaryRed: '#e30217',
+
 			},
 		},
 	},

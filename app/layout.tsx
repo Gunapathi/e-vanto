@@ -1,5 +1,6 @@
-import Footer from "@comp/Footer";
-import Header from "@comp/Header";
+import Footer from "@comp/layout/Footer";
+import Header from "@comp/layout/Header";
+import StoreProvider from "@lib/store/StoreProvider";
 import { Mulish, Montserrat } from "next/font/google";
 import "~scss/style.scss";
 
@@ -20,14 +21,16 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html
-			lang="en"
-			className={``}>
-			<body className={`${mulish.variable} pt-[60px] md:pt-[90px]`}>
-				<Header />
-				{children}
-				<Footer />
-			</body>
-		</html>
+		<StoreProvider>
+			<html
+				lang="en"
+				className={``}>
+				<body className={`${mulish.variable} pt-[60px] md:pt-[90px]`}>
+					<Header />
+					{children}
+					<Footer />
+				</body>
+			</html>
+		</StoreProvider>
 	);
 }

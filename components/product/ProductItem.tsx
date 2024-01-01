@@ -11,10 +11,30 @@ import {
 	NotLikedSvg,
 	PlusSvg,
 } from "@utils/constants/icons";
+import Link from "next/link";
+
+import { useDispatch } from "react-redux";
+import { addProduct } from "@lib/store/slices/cartSlice";
 
 const ProductItem = ({ data, classname, showDesc }: any) => {
 	const [qty, setQty] = useState<any>(0);
 	const [liked, setLiked] = useState<any>(false);
+
+	const dispatch = useDispatch();
+	const handleAddToCart = () => {
+		if (qty > 0) {
+			const productDetails = {
+				id: data?.id,
+				title: data?.title,
+				thumbnail: data?.thumbnail,
+				quantity: qty,
+				price: data?.price,
+				rating: data?.rating,
+				total: data?.price * qty,
+			};
+			dispatch(addProduct(productDetails));
+		}
+	};
 
 	return (
 		<div
@@ -28,6 +48,7 @@ const ProductItem = ({ data, classname, showDesc }: any) => {
 						fill
 						alt={data?.title}
 						className={`object-cover group-hover:scale-[1.1] transition-all duration-300 ease-in-out w-full`}
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw)"
 					/>
 				</div>
 			</div>
@@ -43,9 +64,11 @@ const ProductItem = ({ data, classname, showDesc }: any) => {
 						{data?.brand}
 					</span>
 				</div>
-				<p className="text-[18px] capitalize font-medium leading-[1.2] mb-[10px] line-clamp-">
+				<Link
+					className="text-[18px] capitalize font-medium leading-[1.2] mb-[10px] line-clamp-2 underline"
+					href={`/product/${data?.id}`}>
 					{data?.title}
-				</p>
+				</Link>
 				<div className="flex mb-[15px] items-center justify-start">
 					<button
 						className="cursor-pointer rounded-md flex items-center justify-center mr-[10px]"
@@ -109,6 +132,11 @@ const ProductItem = ({ data, classname, showDesc }: any) => {
 						/>
 					</button>
 				</div>
+				<button
+					className="mt-[25px] cursor-pointer px-[10px] py-[2px] bg-gray-100 rounded-md flex items-center justify-center"
+					onClick={() => qty > 0 && handleAddToCart()}>
+					Add to cart
+				</button>
 			</div>
 		</div>
 	);

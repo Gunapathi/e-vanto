@@ -1,5 +1,5 @@
-import HomeBanner from "@comp/Home/HomeBanner";
-import RandomProductGrid from "@comp/RandomProductGrid";
+import HomeBanner from "@comp/home/HomeBanner";
+import RandomProductGrid from "@comp/product/RandomProductGrid";
 // import { getData } from "@utils/getData";
 import { Metadata } from "next";
 
