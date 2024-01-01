@@ -48,7 +48,11 @@ const config: Config = {
 
 			shippingCardBg: 'linear-gradient(331deg, rgba(82,78,149,1) 0%, rgba(66,66,171,1) 35%, rgba(54,109,189,1) 100%)',
 
-			paymentCardBg: 'linear-gradient(331deg, rgba(20,42,76,1) 0%, rgba(60,60,105,1) 35%, rgba(76,117,175,1) 100%)'
+			paymentCardBg: 'linear-gradient(331deg, rgba(20,42,76,1) 0%, rgba(60,60,105,1) 35%, rgba(76,117,175,1) 100%)',
+
+			limeLinerBg: 'linear-gradient(135deg, #E3FDF5 10%, #FFE6FA 100%)',
+
+			footerRedBg: 'linear-gradient(140deg, rgba(231,164,164,1) 0%, rgba(207,129,129,1) 35%, rgba(224,132,180,1) 100%)',
 
 		},
 		extend: {

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function useonResize() {
+export default function useOnResize() {
 	const isClient = typeof window === "object";
 	const [windowSize, setWindowSize] = useState({
 		width: isClient ? window.innerWidth : 0,

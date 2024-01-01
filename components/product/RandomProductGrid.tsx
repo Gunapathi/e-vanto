@@ -33,9 +33,11 @@ const RandomProductGrid = ({ postList }: any) => {
 
 	return (
 		<section className="max-w-[88%] mx-auto">
-			<h2 className="text-[32px] leading-[1.2] font-bold text-center mb-[40px]">
-				You May be Intrested on
-			</h2>
+			<div className="max-w-[400px] mx-auto text-center md:mb-[40px]">
+				<h2 className="text-[24px] leading-[1.2] sm:text-[36px] lg:text-[40px] text-[#000] xl:leading-[50px] font-bold uppercase mb-[15px] md:mb-[20px]">
+					You May be Intersted on
+				</h2>
+			</div>
 			<div className="mb-[40px]">
 				<Slider {...settings}>
 					{postList.length > 0 &&

@@ -8,6 +8,7 @@ import useMediaQuery from "@utils/hooks/useMediaQuery";
 import MobileNav from "./MobileNav";
 import { useEffect } from "react";
 import Link from "next/link";
+import Logo from "@comp/common/Logo";
 
 const Header = () => {
 	const isPageWide = useMediaQuery("(min-width: 768px)");
@@ -39,7 +40,7 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className="py-4 md:py-6 fixed inset-0 w-full h-[60px] md:h-[90px] z-[5]">
+		<header className="py-1 md:py-2 fixed inset-0 w-full h-[60px] md:h-[90px] z-[5]">
 			<div className="w-[88%] max-w-[1300px] mx-auto flex items-center justify-between">
 				<MobileNav />
 				<nav className="hidden md:flex items-center justify-end">
@@ -52,21 +53,9 @@ const Header = () => {
 							/>
 						))}
 				</nav>
-				<Link
-					className="max-w-[28px] md:max-w-[38px] z-[1] cursor-pointer"
-					href={'/'}
-				>
-					<ImageLoader
-						src={"/images/logo.svg"}
-						width={38}
-						height={38}
-						alt="Logo"
-						style={{
-							width: "auto",
-						}}
-						priority
-					/>
-				</Link>
+
+				<Logo />
+				
 				<div className={`hidden md:block`}>
 					<ActionMenuList />
 				</div>

@@ -8,8 +8,8 @@ export const headerMainLinks = [
         route: '/about',
     },
     {
-        label: 'Contact',
-        route: '/contact',
+        label: 'Products',
+        route: '/products',
     },
 ]
 

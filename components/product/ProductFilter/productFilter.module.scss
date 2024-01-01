@@ -1,0 +1,17 @@
+.filter-heading {
+	font-size: 20px;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+
+.filter-item {
+    input {
+        cursor: pointer;
+    }
+	label {
+        cursor: pointer;
+		font-size: 16px;
+		padding: 0 0 5px 5px;
+        text-transform: capitalize;
+	}
+}

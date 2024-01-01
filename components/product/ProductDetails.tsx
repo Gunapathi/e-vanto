@@ -32,7 +32,7 @@ const ProductDetails = ({ data, className = "" }: any) => {
 
 	return (
 		<div className={`${className}`}>
-			<h2 className="text-[18px] md:text-[22px] lg:text-[45px] capitalize font-medium leading-[1.2] mb-[10px]">
+			<h2 className="text-[24px] leading-[1.2] sm:text-[36px] lg:text-[40px] text-[#000] xl:leading-[50px] font-bold capitalize mb-[15px] md:mb-[20px]">
 				{data?.title}
 			</h2>
 			<div className="flex items-center justify-start mb-[15px] lg:mb-[20px]">
@@ -108,7 +108,7 @@ const ProductDetails = ({ data, className = "" }: any) => {
 				</button>
 			</div>
 			<button
-				className="mt-[25px] cursor-pointer px-[10px] py-[2px] bg-gray-100 rounded-md flex items-center justify-center"
+				className="mt-[25px] cursor-pointer px-[15px] py-[8px] bg-gray-100 rounded-md flex items-center justify-center border-[2px] border-solid border-primaryRed w-full max-w-[200px] ml-0 mr-auto font-bold uppercase"
 				onClick={() => qty > 0 && handleAddToCart()}>
 				Add to cart
 			</button>

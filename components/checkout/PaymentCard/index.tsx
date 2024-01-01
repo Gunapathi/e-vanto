@@ -132,11 +132,11 @@ const PaymentAndShipping = () => {
 	return (
 		<form onSubmit={handleSubmit}>
 			<div
-				className={`${Styles["card-wrapper"]} max-w-[500px] mx-auto ${Styles["payment-card"]} bg-paymentCardBg p-[30px] rounded-[10px] shadow-lg block mb-[40px] last:mb-0`}>
-				<h2 className="text-[24px] leading-[1.2] sm:text-[36px] lg:text-[40px] text-[#fff] xl:leading-[50px] font-bold capitalize mb-[15px] lg:mb-[40px]">
+				className={`${Styles["card-wrapper"]} max-w-[500px] mx-auto ${Styles["payment-card"]} bg-paymentCardBg px-[30px] py-[15px] rounded-[10px] shadow-lg block mb-[40px] last:mb-0`}>
+				<h2 className="text-[24px] leading-[1.2] sm:text-[36px] lg:text-[40px] text-[#fff] xl:leading-[50px] font-bold capitalize mb-[15px]">
 					Payment
 				</h2>
-				<div className="flex mb-[20px]">
+				<div className="flex mb-[10px]">
 					<div className="w-full max-w-[180px] mr-[20px]">
 						<p className={`${Styles["card-label"]}`}>Card Number</p>
 						<input
@@ -160,7 +160,7 @@ const PaymentAndShipping = () => {
 						/>
 					</div>
 				</div>
-				<div className="flex flex-col mb-[20px] max-w-[180px] ml-0 mr-auto">
+				<div className="flex flex-col mb-[10px] max-w-[180px] ml-0 mr-auto">
 					<p className={`${Styles["card-label"]}`}>Name</p>
 					<input
 						type="text"
@@ -171,7 +171,7 @@ const PaymentAndShipping = () => {
 						className={`${Styles["card-input"]}`}
 					/>
 				</div>
-				<div className="flex flex-col mb-[20px] max-w-[80px] ml-0 mr-auto">
+				<div className="flex flex-col mb-[10px] max-w-[80px] ml-0 mr-auto">
 					<p className={`${Styles["card-label"]}`}>CVV</p>
 					<input
 						type="text"
@@ -184,11 +184,11 @@ const PaymentAndShipping = () => {
 				</div>
 			</div>
 			<div
-				className={`${Styles["card-wrapper"]} max-w-[500px] mx-auto ${Styles["shipping-card"]} bg-shippingCardBg p-[30px] rounded-[10px] shadow-lg block mb-[40px] last:mb-0`}>
-				<h2 className="text-[24px] leading-[1.2] sm:text-[36px] lg:text-[40px] text-[#fff] xl:leading-[50px] font-bold capitalize mb-[15px] lg:mb-[40px]">
+				className={`${Styles["card-wrapper"]} max-w-[500px] mx-auto ${Styles["shipping-card"]} bg-paymentCardBg px-[30px] py-[15px] rounded-[10px] shadow-lg block mb-[40px] last:mb-0`}>
+				<h2 className="text-[24px] leading-[1.2] sm:text-[36px] lg:text-[40px] text-[#fff] xl:leading-[50px] font-bold capitalize mb-[15px]">
 					Shipping
 				</h2>
-				<div className="flex flex-col mb-[20px] max-w-[160px] ml-0 mr-auto">
+				<div className="flex flex-col mb-[10px] max-w-[160px] ml-0 mr-auto">
 					<p className={`${Styles["card-label"]}`}>Full Name</p>
 					<input
 						className={`${Styles["card-input"]}`}
@@ -199,7 +199,7 @@ const PaymentAndShipping = () => {
 						placeholder="full name"
 					/>
 				</div>
-				<div className="flex flex-col sm:flex-row mb-[20px]">
+				<div className="flex flex-col sm:flex-row mb-[10px]">
 					<div className="flex flex-col mb-[10px] sm:mb-0 sm:mr-[20px] last:mr-0 max-w-[200px]">
 						<p className={`${Styles["card-label"]}`}>Address</p>
 						<input
@@ -223,7 +223,7 @@ const PaymentAndShipping = () => {
 						/>
 					</div>
 				</div>
-				<div className="flex mb-[20px]">
+				<div className="flex mb-[10px]">
 					<div className="flex flex-col mr-[20px] last:mr-0 max-w-[100px]">
 						<p className={`${Styles["card-label"]}`}>zipcode</p>
 						<input
@@ -257,7 +257,7 @@ const PaymentAndShipping = () => {
 				</div>
 				<div>
 					<p
-						className={`text-[20px] font-bold leading-[1.2] text-[#fff] mt-[35px] mb-[15px]`}>
+						className={`text-[20px] font-bold leading-[1.2] text-[#fff] mt-[20px] mb-[15px]`}>
 						Sipping Method
 					</p>
 					<div className="flex flex-row mb-[10px] last:mb-0">
@@ -273,7 +273,7 @@ const PaymentAndShipping = () => {
 							Free Shipping (2-3 working days): Free
 						</p>
 					</div>
-					<div className="flex flex-row mb-[20px] last:mb-0">
+					<div className="flex flex-row mb-[10px] last:mb-0">
 						<input
 							type="radio"
 							name="shippingMethod"
