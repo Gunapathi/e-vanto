@@ -15,10 +15,12 @@ header {
 	-webkit-transition: all 0.3s ease-in-out;
 	background-color: #fff;
 	&.nav-fixed-top {
-		-webkit-backdrop-filter: blur(2px);
-		backdrop-filter: blur(2px);
 		background-color: rgba(248, 248, 248, 0.75);
 		border-bottom: 2px solid var(--primary-red);
+		@media screen and (min-width: 768px) {
+			-webkit-backdrop-filter: blur(2px);
+			backdrop-filter: blur(2px);
+		}
 	}
 }
 

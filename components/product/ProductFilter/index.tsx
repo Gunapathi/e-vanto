@@ -155,8 +155,6 @@ function ProductFilter(props: IProps) {
 		}
 	}, [searchQuery]);
 
-	console.log("filteredProducts", filteredProductsAll);
-
 	return (
 		<section className="pt-[20px]">
 			<div className="flex flex-wrap items-start">

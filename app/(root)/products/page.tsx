@@ -3,7 +3,7 @@ import ProductFilter from "@comp/product/ProductFilter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "E-Vanto",
+	title: "Categories | E-Vanto",
 	description: "E-Vanto for product purchase",
 };
 
