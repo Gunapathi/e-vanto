@@ -1,5 +1,5 @@
 import MenuTransitionEffect from "@comp/common/MenuTransitionEffect";
-import HomeBanner from "@comp/home/HomeBanner";
+import HomeBanner from "@comp/Home/HomeBanner";
 import RandomProductGrid from "@comp/product/RandomProductGrid";
 import { Metadata } from "next";
 
