@@ -9,7 +9,7 @@ import {
 import { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { addProduct } from "@lib/store/slices/productSlice";
+import { addProduct } from "@lib/store/slices/cartSlice";
 
 const ProductDetails = ({ data, className = "" }: any) => {
 	const [qty, setQty] = useState<any>(0);
@@ -24,7 +24,6 @@ const ProductDetails = ({ data, className = "" }: any) => {
 				thumbnail: data?.thumbnail,
 				quantity: qty,
 				price: data?.price,
-				disPercent: data?.discountPercentage,
 				total: data?.price * qty,
 			};
 			dispatch(addProduct(productDetails));

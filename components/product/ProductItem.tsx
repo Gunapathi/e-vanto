@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 
 import { useDispatch } from "react-redux";
-import { addProduct } from "@lib/store/slices/productSlice";
+import { addProduct } from "@lib/store/slices/cartSlice";
 
 const ProductItem = ({ data, classname, showDesc }: any) => {
 	const [qty, setQty] = useState<any>(0);
@@ -29,7 +29,7 @@ const ProductItem = ({ data, classname, showDesc }: any) => {
 				thumbnail: data?.thumbnail,
 				quantity: qty,
 				price: data?.price,
-				disPercent: data?.discountPercentage,
+				rating: data?.rating,
 				total: data?.price * qty,
 			};
 			dispatch(addProduct(productDetails));
