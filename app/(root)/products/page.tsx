@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const ProductsPage = async () => {
-	const data = await fetch(`${process.env.STATIC_URL}/api/products`).then(
+	const data = await fetch(`${process.env.DUMMY_JSON_URI}/api/products`).then(
 		(res) => res.json()
 	);
 	return (
