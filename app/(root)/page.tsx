@@ -1,7 +1,6 @@
 import MenuTransitionEffect from "@comp/common/MenuTransitionEffect";
 import HomeBanner from "@comp/home/HomeBanner";
 import RandomProductGrid from "@comp/product/RandomProductGrid";
-// import { getData } from "@utils/getData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

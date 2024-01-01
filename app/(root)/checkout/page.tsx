@@ -1,6 +1,12 @@
 import CartDetails from "@comp/checkout/CartDetails";
 import PaymentAndShipping from "@comp/checkout/PaymentCard";
 import MenuTransitionEffect from "@comp/common/MenuTransitionEffect";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Checout | E-Vanto",
+	description: "E-Vanto for product purchase",
+};
 
 const CheckoutPage = async () => {
 	return (

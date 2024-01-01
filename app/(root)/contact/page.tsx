@@ -1,4 +1,10 @@
 import MenuTransitionEffect from "@comp/common/MenuTransitionEffect";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Contact Us | E-Vanto",
+	description: "E-Vanto for product purchase",
+};
 
 const ContactPage = () => {
 	return (

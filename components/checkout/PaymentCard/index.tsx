@@ -7,6 +7,7 @@ import {
 	updateShippingAddress,
 } from "@lib/store/slices/cartSlice";
 import Styles from "./paymentCard.module.scss";
+import HandleError from "@comp/common/HandleError";
 
 interface CardDetails {
 	cardNumber: string;
@@ -112,16 +113,6 @@ const PaymentAndShipping = () => {
 		}
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		dispatch(updateShippingAddress({ ...shippingDetails }));
-		setOrderDetails(() => ({
-			orderTotal: orderTotal,
-			cartItems: products,
-			shippingDetails: shippingDetails,
-		}));
-	};
-
 	const [orderDetails, setOrderDetails] = useState<any>({});
 	const products = useSelector((state: any) => state.cart.products);
 
@@ -129,8 +120,44 @@ const PaymentAndShipping = () => {
 		console.log(orderDetails);
 	}, [orderDetails]);
 
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		if (orderTotal > 0) {
+			dispatch(updateShippingAddress({ ...shippingDetails }));
+			setOrderDetails(() => ({
+				orderTotal: orderTotal,
+				cartItems: products,
+				shippingDetails: shippingDetails,
+			}));
+			setHandleError(true);
+			setErrorMsg("Order Placed!!! Verify on console");
+			setHandleType("success");
+		} else {
+			setHandleError(true);
+			setErrorMsg("Error placing order! Check cart and order details");
+			setHandleType("error");
+		}
+	};
+
+	const [handleError, setHandleError] = useState(false);
+	const [errorMsg, setErrorMsg] = useState("");
+	const [handleType, setHandleType] = useState("");
+
+	useEffect(() => {
+		setTimeout(() => {
+			setHandleError(false);
+		}, 3000);
+	}, [handleError]);
+
 	return (
 		<form onSubmit={handleSubmit}>
+			{handleError && (
+				<HandleError
+					message={errorMsg}
+					setHandleError={setHandleError}
+					type={handleType}
+				/>
+			)}
 			<div
 				className={`${Styles["card-wrapper"]} max-w-[500px] mx-auto ${Styles["payment-card"]} bg-paymentCardBg px-[30px] py-[15px] rounded-[10px] shadow-lg block mb-[40px] last:mb-0`}>
 				<h2 className="text-[24px] leading-[1.2] sm:text-[36px] lg:text-[40px] text-[#fff] xl:leading-[50px] font-bold capitalize mb-[15px]">
