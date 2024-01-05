@@ -157,7 +157,7 @@ function ProductFilter(props: IProps) {
 
 	return (
 		<section className="pt-[20px]">
-			<div className="flex flex-wrap items-start">
+			<div className="z-[6] relative flex flex-wrap items-start">
 				<div
 					className={`px-[15px] shrink-0 max-md:pt-[20px] py-[30px] fixed w-[88%] md:w-[200px] max-md:bg-slate-100 z-[5] md:z-[-1] ${
 						openMobileFilter ? "left-0" : "max-md:!-left-full"
